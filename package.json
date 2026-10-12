@@ -8,10 +8,12 @@
     "dev:web": "vite",
     "dev:api": "nodemon api/index.js",
     "build": "vite build",
+    "test": "vitest run tests/api",
+    "test:integration": "vitest run tests/integration",
     "start": "node api/index.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check": "npm run lint -- --fix && npm run lint"
+    "check": "npm test && npm run lint -- --fix && npm run lint"
   },
   "dependencies": {
     "axios": "^1.12.2",
@@ -34,6 +36,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
     "nodemon": "^3.1.14",
+    "supertest": "^7.3.1",
     "vite": "^7.1.7",
     "vitest": "^5.0.3"
   },
